@@ -1,0 +1,15 @@
+/* Menu principal */
+nav ul { list-style: none; display: flex; gap: var(--spacing-md); padding: 0; margin: 0; }
+nav li { position: relative; }
+
+/* Dropdown */
+nav li ul { display: none; position: absolute; top: 100%; left: 0; background: var(--color-white); border: 1px solid var(--color-gray-dark); padding: var(--spacing-sm); }
+nav li:hover ul { display: block; }
+
+/* Menu hambúrguer mobile */
+.menu-toggle { display: none; cursor: pointer; }
+@media(max-width: 768px) {
+    nav ul { display: none; flex-direction: column; background: var(--color-primary); width: 100%; }
+    nav ul.active { display: flex; }
+    .menu-toggle { display: block; color: var(--color-white); }
+}

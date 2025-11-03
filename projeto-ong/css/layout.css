@@ -1,0 +1,23 @@
+/* Grid principal (12 colunas) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Flexbox para componentes internos */
+.flex {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+/* Breakpoints responsivos */
+@media (max-width: 1200px) { .container { grid-template-columns: repeat(12, 1fr); } }
+@media (max-width: 992px) { .container { grid-template-columns: repeat(8, 1fr); } }
+@media (max-width: 768px) { .container { grid-template-columns: repeat(6, 1fr); } }
+@media (max-width: 576px) { .container { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 375px) { .container { grid-template-columns: repeat(2, 1fr); } }
